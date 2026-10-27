@@ -29,3 +29,10 @@ resource "azurerm_subnet" "lab_subnet_2" {
   virtual_network_name = azurerm_virtual_network.lab_vnet.name
   address_prefixes     = ["10.10.2.0/24"]
 }
+
+resource "azurerm_subnet" "lab_subnet_3" {
+  name                 = "snet-workload-three"
+  resource_group_name  = "rg-terraform-lab01"
+  virtual_network_name = azurerm_virtual_network.lab_vnet.name
+  address_prefixes     = ["10.10.3.0/24"]
+}
